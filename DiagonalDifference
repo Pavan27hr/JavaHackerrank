@@ -1,0 +1,13 @@
+def diagonalDifference(arr):
+    n=len(arr)
+    su=0
+    su1=0
+    for i in range(n):
+        for j in range(n):
+            if(i==j):
+                su+=arr[i][j]
+    for i in range(n):
+        for j in range(n):
+            if((i+j==n-1)):
+                su1=su1+arr[i][j]
+    return abs(su-su1)
