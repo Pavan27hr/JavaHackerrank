@@ -1,0 +1,9 @@
+def birthdayCakeCandles(candles):
+    candles.sort()
+    n=len(candles)
+    c=candles[n-1]
+    co=0
+    for i in range(0,n):
+        if(c==candles[i]):
+            co=co+1
+    return co
