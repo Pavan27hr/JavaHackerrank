@@ -1,0 +1,11 @@
+def miniMaxSum(arr):
+   arr.sort()
+   mx=0
+   mn=0
+   for i in range(0,len(arr)-1):
+       mn+=arr[i]
+   for i in range(1,len(arr)):
+       mx+=arr[i]
+   print(mn,end=" ")
+   print(mx)
+    
