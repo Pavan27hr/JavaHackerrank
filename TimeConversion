@@ -1,14 +1,9 @@
-def timeConversion(s):
-    t=s[-2:]
-    if(t=="AM"):
-        if s[0:2]==12:
-            return "01:"+s[3:8]
-        else:
-            return s[0:9]
+ t = s.split(":")
+    if s[-2:] == "PM":
+        if t[0] != "12":
+            t[0] = str(int(t[0])+12)
     else:
-        if(s[0:2]==12):
-            return s[0:9]
-        else:
-            a = int(s[:2]) + 12
-            return str(str(a) + s[2:8])
-            
+        if t[0] == "12":
+            t[0] = "00"
+    nt = ':'.join(t)
+    return str(nt[:-2])
