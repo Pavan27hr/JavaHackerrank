@@ -1,0 +1,9 @@
+def getMoneySpent(keyboards, drives, b):
+   m=-1
+   for k_price in keyboards:
+       for d_price in drives:
+           total=k_price+d_price
+           if total <=b and total >m:
+               m=total
+               
+   return m
